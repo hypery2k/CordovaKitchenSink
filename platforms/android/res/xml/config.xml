@@ -18,4 +18,8 @@
         <param name="android-package" value="org.apache.cordova.dialogs.Notification" />
         <param name="id" value="org.apache.cordova.dialogs" />
     </feature>
+    <feature name="Vibration">
+        <param name="android-package" value="org.apache.cordova.vibration.Vibration" />
+        <param name="id" value="org.apache.cordova.vibration" />
+    </feature>
 </widget>

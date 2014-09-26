@@ -40,6 +40,7 @@
 		ADD3B3C7CAF2470CAC177F77 /* CDVNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E1678EED70445DF967634AD /* CDVNotification.m */; };
 		F11B9DC94A7D423088F43433 /* CDVNotification.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8E29CF85EA9F4F21A8013DFC /* CDVNotification.bundle */; };
 		B8A2F096A73343519D69BD06 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 027DF60DAC6847A49119A918 /* AudioToolbox.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		320BC2E19B8B40AEB7E3EA00 /* CDVVibration.m in Sources */ = {isa = PBXBuildFile; fileRef = 3777B6915A7A49B597957CA7 /* CDVVibration.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +108,8 @@
 		08467A0E488A4A1786D0E3C5 /* CDVNotification.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVNotification.h"; path = "org.apache.cordova.dialogs/CDVNotification.h"; sourceTree = "<group>"; fileEncoding = 4; };
 		8E29CF85EA9F4F21A8013DFC /* CDVNotification.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = "CDVNotification.bundle"; path = "CDVNotification.bundle"; sourceTree = "<group>"; };
 		027DF60DAC6847A49119A918 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "AudioToolbox.framework"; path = "System/Library/Frameworks/AudioToolbox.framework"; sourceTree = SDKROOT; fileEncoding = 4; };
+		3777B6915A7A49B597957CA7 /* CDVVibration.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVVibration.m"; path = "org.apache.cordova.vibration/CDVVibration.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		2324E8B624254FAD8050C963 /* CDVVibration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVVibration.h"; path = "org.apache.cordova.vibration/CDVVibration.h"; sourceTree = "<group>"; fileEncoding = 4; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -230,6 +233,8 @@
 			children = (
 				0E1678EED70445DF967634AD /* CDVNotification.m */,
 				08467A0E488A4A1786D0E3C5 /* CDVNotification.h */,
+				3777B6915A7A49B597957CA7 /* CDVVibration.m */,
+				2324E8B624254FAD8050C963 /* CDVVibration.h */,
 			);
 			name = Plugins;
 			path = "CordovaKitchenSink/Plugins";
@@ -426,6 +431,7 @@
 				1D3623260D0F684500981E51 /* AppDelegate.m in Sources */,
 				302D95F114D2391D003F00A1 /* MainViewController.m in Sources */,
 				ADD3B3C7CAF2470CAC177F77 /* CDVNotification.m in Sources */,
+				320BC2E19B8B40AEB7E3EA00 /* CDVVibration.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

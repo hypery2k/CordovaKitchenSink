@@ -76,6 +76,8 @@
 
                 <button type="button" class="btn" id="button-native-alert">Alert</button>
                 <button type="button" class="btn" id="button-native-confirm">Confirm</button>
+                <button type="button" class="btn" id="button-native-beep">Beep</button>
+                <button type="button" class="btn" id="button-native-vibrate">Vibrate</button>
             </div>
 
         </div><!-- /.container -->
@@ -174,6 +176,14 @@
                     'Confirm',
                     ['Click', 'me', 'hard']
             );
+        });
+
+        $('#button-native-beep').click(function() {
+            navigator.notification.beep(1);
+        });
+
+        $('#button-native-vibrate').click(function() {
+            navigator.vibrate(700);
         });
 
         showPage('main');
