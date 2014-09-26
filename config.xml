@@ -9,6 +9,9 @@
     </author>
     <content src="index.html" />
     <access origin="*" />
+    <feature name="Camera">
+        <param name="id" value="org.apache.cordova.camera" />
+    </feature>
     <feature name="Notification">
         <param name="id" value="org.apache.cordova.dialogs" />
     </feature>
