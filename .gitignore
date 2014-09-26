@@ -4,5 +4,7 @@
 
 bower_components
 platforms/android/assets
+platforms/ios/www
+platforms/android/www
 plugins
 
