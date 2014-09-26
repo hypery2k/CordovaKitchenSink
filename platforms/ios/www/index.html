@@ -1,12 +1,35 @@
+<!--
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <title>Hello World</title>
+    </head>
+    <body>
+        <div class="app">
+            <h1>Apache Cordova</h1>
+            <div id="deviceready" class="blink">
+                <p class="event listening">Connecting to Device</p>
+                <p class="event received">Device is Ready</p>
+            </div>
+        </div>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+    </body>
+</html>
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
+    <meta charset="utf-8"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="msapplication-tap-highlight" content="no"/>
+    <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+    <meta name="viewport"
+          content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi"/>
 
     <title>Cordova kitchen sink</title>
 
@@ -43,6 +66,20 @@
         <!--/.nav-collapse -->
     </div>
 </div>
+
+
+<div id="loading-mask" data-backdrop="static" data-keyboard="false" class="modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Loading...</h4>
+      </div>
+      <div class="modal-body">
+        <p>We need a splash screen</p>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 
     <span class="page page-main">
         <div class="container">
@@ -99,9 +136,11 @@
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
 <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="bower_components/lodash/dist/lodash.min.js"></script>
+<script src="cordova.js"></script>
+<script src="js/app.js"></script>
 <script>
-    (function () {
-        var pages = $('span.page');
+    $(function() {
 
         function showPage(page) {
             pages.hide();
@@ -110,10 +149,17 @@
 
         function onNavigationClick(e) {
             var target = $(e.target),
-                page = target.data('page');
-
+                    page = target.data('page');
             showPage(page);
+
         }
+
+        $(".navbar-nav li a").click(function(event) {
+            $(".navbar-collapse").collapse('hide');
+        });
+
+        var pages = $('span.page'),
+                loadMask = $('#loading-mask');
 
         $('#menu a').each(function() {
             var that = $(this),
@@ -125,7 +171,14 @@
         });
 
         showPage('main');
-    })();
+        loadMask.modal();
+
+        app.initialize({
+            hideLoader: function() {
+                loadMask.modal('hide');
+            }
+        });
+    });
 </script>
 </body>
 </html>
