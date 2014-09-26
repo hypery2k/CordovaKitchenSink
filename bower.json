@@ -1,0 +1,11 @@
+{
+    "name": "CordovaKitchenSink",
+    "version": "0.0.0",
+    "homepage": "https://github.com/tfitschen/CordovaKitchenSink",
+    "authors": [],
+    "license": "MIT",
+    "devDependencies": {
+        "bootstrap": "latest",
+        "lodash": "latest"
+    }
+}
