@@ -12,6 +12,9 @@
     <feature name="Camera">
         <param name="id" value="org.apache.cordova.camera" />
     </feature>
+    <feature name="Device Orientation">
+        <param name="id" value="org.apache.cordova.device-orientation" />
+    </feature>
     <feature name="Notification">
         <param name="id" value="org.apache.cordova.dialogs" />
     </feature>
