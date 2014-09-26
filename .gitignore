@@ -3,4 +3,6 @@
 .log
 
 bower_components
+platforms/android/assets
 plugins
+
