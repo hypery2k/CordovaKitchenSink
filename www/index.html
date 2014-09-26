@@ -37,7 +37,7 @@
             <ul class="nav navbar-nav">
                 <li><a data-page="notify" href="#">Native notifcations</a></li>
                 <li><a data-page="demo-2" href="#">Demo 2</a></li>
-                <li><a data-page="demo-3" href="#">Demo 3</a></li>
+                <li><a data-page="orientation" href="#">Orientation</a></li>
             </ul>
         </div>
         <!--/.nav-collapse -->
@@ -97,14 +97,14 @@
     </span>
 
 
-    <span class="page-demo-3 page">
+    <span class="page-orientation page">
         <div class="container">
 
             <div class="starter-template">
-                <h1>DEMO 3</h1>
+                <h1>Orientation</h1>
 
-                <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this
-                    text and a mostly barebones HTML document.</p>
+                <button type="button" class="btn" id="button-native-orientation">Get Orientation</button>
+                <p class="lead" id="p-orientation-result"></p>
             </div>
 
         </div><!-- /.container -->
@@ -194,6 +194,20 @@
                 loadMask.modal('hide');
             }
         });
+        
+        $('#button-native-orientation').click(function() {
+        	navigator.compass.getCurrentHeading(onOrientationSuccess, onOrientationError);
+        });
+
+        function onOrientationSuccess(heading) {
+    		$('#p-orientation-result').html('Heading: ' + heading.magneticHeading);
+		};
+		
+		function onOrientationError(error) {
+		    $('#p-orientation-result').html('CompassError: ' + error.code);
+		};
+		
+		
     });
 </script>
 </body>

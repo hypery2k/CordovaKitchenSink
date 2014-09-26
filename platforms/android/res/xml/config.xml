@@ -5,6 +5,15 @@
     <feature name="App">
         <param name="android-package" value="org.apache.cordova.App" />
     </feature>
+    <feature name="Notification">
+        <param name="android-package" value="org.apache.cordova.dialogs.Notification" />
+    </feature>
+    <feature name="Vibration">
+        <param name="android-package" value="org.apache.cordova.vibration.Vibration" />
+    </feature>
+    <feature name="Compass">
+        <param name="android-package" value="org.apache.cordova.deviceorientation.CompassListener" />
+    </feature>
     <name>CordovaKitchenSink</name>
     <description>
         A sample Apache Cordova application that responds to the deviceready event.
@@ -14,12 +23,4 @@
     </author>
     <content src="index.html" />
     <access origin="*" />
-    <feature name="Notification">
-        <param name="android-package" value="org.apache.cordova.dialogs.Notification" />
-        <param name="id" value="org.apache.cordova.dialogs" />
-    </feature>
-    <feature name="Vibration">
-        <param name="android-package" value="org.apache.cordova.vibration.Vibration" />
-        <param name="id" value="org.apache.cordova.vibration" />
-    </feature>
 </widget>
