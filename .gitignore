@@ -2,10 +2,12 @@
 .idea
 .log
 
-bower_components
-platforms/android/assets
-platforms/ios/www
-platforms/android/www
-plugins
-local.properties
+node_modules
+src/bower_components
 
+platforms/android
+platforms/ios
+
+plugins/*.json
+
+www

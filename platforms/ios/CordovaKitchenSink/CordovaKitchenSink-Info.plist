@@ -49,7 +49,7 @@
       </dict>
     </dict>
     <key>CFBundleIdentifier</key>
-    <string>de.mayflower.cordova-kitchen-sink</string>
+    <string>com.example.cordova-kitchen-sink</string>
     <key>CFBundleInfoDictionaryVersion</key>
     <string>6.0</string>
     <key>CFBundleName</key>
@@ -79,7 +79,5 @@
     </array>
     <key>CFBundleShortVersionString</key>
     <string>0.0.1</string>
-    <key>NSLocationWhenInUseUsageDescription</key>
-    <string></string>
   </dict>
 </plist>
